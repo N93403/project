@@ -1,0 +1,14 @@
+<h2>Le tue prenotazioni</h2>
+<ul>
+  {% for r in reservations %}
+    <li>{{ r.reservation_date }} {{ r.reservation_time }} - {{ r.details }}</li>
+  {% endfor %}
+</ul>
+
+<form method="POST">
+  {{ form.hidden_tag() }}
+  {{ form.date.label }} {{ form.date() }}<br>
+  {{ form.time.label }} {{ form.time() }}<br>
+  {{ form.details.label }} {{ form.details() }}<br>
+  {{ form.submit() }}
+</form>
