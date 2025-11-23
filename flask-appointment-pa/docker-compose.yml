@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - SECRET_KEY=supersecret
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/appointments
+    depends_on:
+      - db
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: appointments
+    volumes:
+      - db_data:/var/lib/postgresql/data
+volumes:
+  db_data:
