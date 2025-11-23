@@ -27,7 +27,7 @@ Il progetto segue gli standard **ISO/IEC/IEEE 29148:2018 (Requirements Engineeri
 
 ## ⚙️ Installazione
 ```bash
-git clone https://github.com/tuo-username/flask-appointment-pa.git
+git clone https://github.com/N93403/flask-appointment-pa.git
 cd flask-appointment-pa
 pip install -r requirements.txt
 flask run
